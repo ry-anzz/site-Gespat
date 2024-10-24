@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Patrimônio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="sidebar-patrimonio">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo GESPAT" class="logo-img" />
+      </div>
+
+      <nav>
+        <div class="section-title">PATRIMONIOS</div>
+        <a
+          href="./components-patrimonio/cadastrar.php"
+          class="nav-link active"
+          target="contentFrame"
+          data-section="cadastrar" 
+          class="nav-link"
+           onclick="showSection('cadastrar')"
+        >
+          <i class="fas fa-plus"></i> Cadastrar
+        </a>
+
+        <a
+          href="components-patrimonio/consultar.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="consultar" 
+          class="nav-link"
+           onclick="showSection('consultar')"
+        >
+          <i class="fas fa-search"></i> Consultar / Alterar
+        </a>
+
+        <a
+          href="components-patrimonio/relatorio.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="relatorio" 
+          class="nav-link"
+           onclick="showSection('relatorio')"
+        >
+          <i class="fas fa-file-alt"></i> Gerar relatório
+        </a>
+
+        <a
+          href="components-patrimonio/invalidar.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="invalidar" 
+          class="nav-link"
+           onclick="showSection('invalidar')"
+        >
+          <i class="fas fa-ban"></i> Invalidar
+        </a>
+
+        <a
+          href="components-patrimonio/transferir.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="transferir" 
+          class="nav-link"
+           onclick="showSection('transferir')"
+        >
+          <i class="fas fa-exchange-alt"></i> Transferir
+        </a>
+
+        <div class="section-title">DEPARTAMENTOS</div>
+        <a
+          href="components-departamento/departamento-cadastrar.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="cadastrar-pat" 
+          class="nav-link"
+           onclick="showSection('cadastrar-pat')"
+        >
+          <i class="fas fa-plus"></i> Cadastrar
+        </a>
+
+        <a
+          href="components-departamento/departamento-consultar.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="consultar-pat" 
+          class="nav-link"
+           onclick="showSection('consultar-pat')"
+        >
+          <i class="fas fa-search"></i> Consultar
+        </a>
+
+        <a
+          href="components-departamento/departamento-relatorio.php"
+          class="nav-link"
+          target="contentFrame"
+          data-section="relatorio-pat" 
+          class="nav-link"
+           onclick="showSection('relatorio-pat')"
+        >
+          <i class="fas fa-file-alt"></i> Gerar relatório
+        </a>
+      </nav>
+      <a href="components-login/login.html" class="logout">
+        <i class="fas fa-sign-out-alt"></i> Sair
+      </a>
+    </div>
+
+    <div class="main-content-patrimonio">
+      <iframe
+        name="contentFrame"
+        src="components-patrimonio/cadastrar.php"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

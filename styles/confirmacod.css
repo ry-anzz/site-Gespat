@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+.verificacao-pagina {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/bgimg.png');
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.verificacao-pagina .container {
+    text-align: center;
+    border-radius: 10px;    
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.466);
+
+}
+
+.verificacao-pagina .login-box {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    width: 320px;
+    position: relative;
+}
+
+.verificacao-pagina .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+
+.verificacao-pagina .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.verificacao-pagina h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.verificacao-pagina p {
+    color: #666666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.verificacao-pagina .input-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.verificacao-pagina .input-group input {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #00000038;
+    border-radius: 5px;
+    
+    font-size: 24px;
+    background-color: #DDDDDD; 
+}
+
+.verificacao-pagina button {
+    width: 100%;
+    padding: 12px;
+    background-color: #D4A518;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.verificacao-pagina button:hover {
+    background-color: #b48c12;
+}
+
