@@ -198,7 +198,7 @@ button:hover {
     /* Fundo branco para combinar com a área de conteúdo */
     box-sizing: border-box;
     /* Garante que o padding não afete a largura total */
-    min-height: 100vh;
+    min-height: 110vh;
     /* Garante que o conteúdo ocupe toda a altura da tela */
     overflow: hidden;
     /* Evita overflow de conteúdo */

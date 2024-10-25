@@ -5,15 +5,21 @@ $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome_departamento = $_POST["nome-departamento"];
-
     $nome_departamento = mysqli_real_escape_string($con, $nome_departamento);
 
-    $sql = "INSERT INTO departamento (nome) VALUES ('$nome_departamento')";
+    // Verificar se o departamento já está cadastrado
+    $checkSql = "SELECT * FROM departamento WHERE nome = '$nome_departamento'";
+    $result = mysqli_query($con, $checkSql);
 
-    if (mysqli_query($con, $sql)) {
-        $message = "Departamento cadastrado com sucesso!";
+    if (mysqli_num_rows($result) > 0) {
+        $message = "Departamento já cadastrado!";
     } else {
-        $message = "Erro ao cadastrar: " . mysqli_error($con);
+        $sql = "INSERT INTO departamento (nome) VALUES ('$nome_departamento')";
+        if (mysqli_query($con, $sql)) {
+            $message = "Departamento cadastrado com sucesso!";
+        } else {
+            $message = "Erro ao cadastrar: " . mysqli_error($con);
+        }
     }
 
     mysqli_close($con);
@@ -27,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Departamento</title>
     <link rel="stylesheet" href="../styles/invalidar.css">
+</head>
 <body>
 
 <div id="section-departamento-cadastrar" class="content-section">
@@ -36,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- Exibir mensagem de sucesso ou erro -->
         <?php if (!empty($message)): ?>
-            <div class="message <?php echo (strpos($message, 'Erro') !== false) ? 'error' : ''; ?>">
+            <div class="message <?php echo (strpos($message, 'Erro') !== false || strpos($message, 'já cadastrado') !== false) ? 'error' : ''; ?>">
                 <?php echo $message; ?>
                 <button class="close-btn" onclick="this.parentElement.style.display='none';">&times;</button>
             </div>

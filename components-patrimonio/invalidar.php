@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form method="POST" action="">
                 <div class="form-group-patrimonio">
                     <label for="codigo">Código</label>
-                    <input type="number" id="codigo" name="codigo" placeholder="Código do patrimônio" required>
+                    <input type="text" id="codigo" name="codigo" placeholder="Código do patrimônio" required>
                 </div>
                 <button type="submit" class="btn-patrimonio">Invalidar</button>
             </form>

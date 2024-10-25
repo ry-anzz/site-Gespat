@@ -102,7 +102,7 @@ if (isset($con)) {
                 <div class="form-group-patrimonio">
                     <label for="codigo-consulta">Código</label>
                     <input
-                        type="number"
+                        type="text"
                         id="codigo-consulta"
                         name="codigo-consulta"
                         placeholder="Código do patrimônio"

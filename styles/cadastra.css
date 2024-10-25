@@ -5,7 +5,6 @@
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-    cursor: pointer;
 }
 
 
@@ -25,8 +24,27 @@
     font-size: 14px;
 }
 
-.form-group-patrimonio input,
-.form-group-patrimonio select {
+.form-group-patrimonio input {
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.form-group-patrimonio select{
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.form-group-departamento label{
     width: 500px;
     padding: 10px;
     box-sizing: border-box;
@@ -46,6 +64,8 @@
     font-size: 14px;
     color: #333333;
 }
+
+
 
 .image-placeholder-patrimonio {
     width: 700px;
